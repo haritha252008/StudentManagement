@@ -1,6 +1,6 @@
 # Import student module
 import student
-
+print("\nWelcome to Student Management System")
 # Menu-driven program
 while True:
 
