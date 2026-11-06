@@ -1,6 +1,9 @@
 # Import student module
 import student
+
+# Welcome message
 print("\nWelcome to Student Management System")
+
 # Menu-driven program
 while True:
 
@@ -9,6 +12,7 @@ while True:
     print("2. Display Students")
     print("3. Search Student")
     print("4. Exit")
+    print("5. Delete Student")
 
     choice = input("Enter your choice: ")
 
@@ -25,6 +29,9 @@ while True:
         print("Thank you for using Student Management System!")
         break
 
+    elif choice == "5":
+        student.delete_student()
+
     else:
-        print("Invalid choice! Try again.")
+        print("Invalid choice! Please try again.")
 

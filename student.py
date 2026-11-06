@@ -23,8 +23,10 @@ def display_students():
     if not students:
         print("No student records found.")
     else:
+        print("\n--- Student Details ---")
+
         for student in students:
-            print("\nStudent ID:", student["ID"])
+            print("Student ID:", student["ID"])
             print("Name:", student["Name"])
             print("Age:", student["Age"])
             print("Course:", student["Course"])
@@ -37,10 +39,23 @@ def search_student():
     for student in students:
         if student["ID"] == student_id:
             print("\nStudent Found!")
-            print("ID:", student["ID"])
+            print("Student ID:", student["ID"])
             print("Name:", student["Name"])
             print("Age:", student["Age"])
             print("Course:", student["Course"])
+            return
+
+    print("Student not found.")
+
+
+# Function to delete a student
+def delete_student():
+    student_id = input("Enter Student ID to delete: ")
+
+    for student in students:
+        if student["ID"] == student_id:
+            students.remove(student)
+            print("Student deleted successfully!")
             return
 
     print("Student not found.")
